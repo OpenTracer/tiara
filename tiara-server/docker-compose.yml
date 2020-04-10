@@ -1,0 +1,11 @@
+version: '3.0'
+services:
+  manager:
+    build: .
+    ports: 
+    - "5555:3000"
+    volumes:
+    - .:/usr/src/app
+    - node_modules:/usr/src/app/node_modules
+volumes:
+  node_modules:
